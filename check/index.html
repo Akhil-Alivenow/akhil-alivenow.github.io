@@ -10,6 +10,21 @@
     <meta name="apple-itunes-app-clip-app-banner" content="yes" />
 </head>
 <body>
+<script>
+     function isIOS() {
+        return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    }
 
+    // Check if the user is using Android
+    function isAndroid() {
+        return /Android/.test(navigator.userAgent);
+    }
+    
+    if (isAndroid()) {
+        window.location = "https://play.google.com/store/apps/details?id=com.alivenow.googleplayinstantgame&launch=true";       
+    } else {
+        console.log("This is neither an iOS nor Android device.");
+    }  
+</script>
 </body>
 </html>
